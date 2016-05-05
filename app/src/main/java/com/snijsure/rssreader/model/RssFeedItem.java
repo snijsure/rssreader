@@ -40,4 +40,14 @@ public class RssFeedItem implements Serializable {
     }
     public RssFeedItem() {}
 
+    public boolean isEqualTo(RssFeedItem o) {
+        if (o.getTitle().equals(title) &&
+                o.getDescription().equals(description) &&
+                o.getPublicationDate().equals(publicationDate)) {
+            return true;
+        }
+        else
+            return false;
+    }
+
 }
