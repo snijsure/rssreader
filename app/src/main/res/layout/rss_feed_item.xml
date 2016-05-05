@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/inter_card_half_spacing"
+    android:layout_marginTop="@dimen/inter_card_half_spacing"
+    card_view:cardCornerRadius="1dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/default_margin_padding" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_margin_padding" />
+            <View style="@style/HorizontalDivider" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_margin_padding"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+            <View style="@style/HorizontalDivider" />
+            <TextView
+                android:id="@+id/pubdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_margin_padding"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/HorizontalDivider" />
+</android.support.v7.widget.CardView>

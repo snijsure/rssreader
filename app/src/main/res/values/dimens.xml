@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="default_margin_padding">4dp</dimen>
+    <dimen name="inter_card_half_spacing">2dp</dimen>
+    <dimen name="card_padding">4dp</dimen>
+</resources>
