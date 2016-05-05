@@ -42,7 +42,7 @@ public class RssService extends Service {
     public static final String ITEMS = "items";
     public static final String RECEIVER = "receiver";
     private final static String TAG = "RssService";
-    private final static int UPDATE_INTERVAL_MIN = 1;
+    private final static int UPDATE_INTERVAL_MIN = 10;
     List<RssFeedItem> cachedList = null;
     Intent mIntent;
 
