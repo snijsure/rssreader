@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         rss_feed_list = (RecyclerView)findViewById(R.id.rss_feed_list);
         rss_feed_list.setHasFixedSize(true);
         rss_feed_list.addItemDecoration(new MarginDecoration(this));
-        //LinearLayoutManager layoutMgr = new LinearLayoutManager(this);
-        GridLayoutManager   layoutMgr = new GridLayoutManager(this, 2);
+        LinearLayoutManager layoutMgr = new LinearLayoutManager(this);
+        //GridLayoutManager   layoutMgr = new GridLayoutManager(this, 2);
         rss_feed_list.setLayoutManager(layoutMgr);
 
         /*
