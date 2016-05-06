@@ -3,14 +3,18 @@ package com.snijsure.rssreader;
  * Created by subodhnijsure on 5/4/16.
  */
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -33,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         rss_feed_list = (RecyclerView)findViewById(R.id.rss_feed_list);
         rss_feed_list.setHasFixedSize(true);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        rss_feed_list.setLayoutManager(linearLayoutManager);
+        rss_feed_list.addItemDecoration(new MarginDecoration(this));
+        //LinearLayoutManager layoutMgr = new LinearLayoutManager(this);
+        GridLayoutManager   layoutMgr = new GridLayoutManager(this, 2);
+        rss_feed_list.setLayoutManager(layoutMgr);
 
         /*
         // Code to test UI without actually invoking
@@ -73,4 +78,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    public class MarginDecoration extends RecyclerView.ItemDecoration {
+        private int margin;
+
+        public MarginDecoration(Context context) {
+            margin = context.getResources().getDimensionPixelSize(R.dimen.item_margin);
+        }
+
+        @Override
+        public void getItemOffsets(
+                Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            outRect.set(margin, margin, margin, margin);
+        }
+    }
 }
